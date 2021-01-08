@@ -3,7 +3,32 @@
 <title> San Andreas </title>
 </head>
 <body>
-3d objects
-something
+  <script>
+    function setup() {
+  createCanvas(400, 400, WEBGL);
+}
+
+let angle = 2;
+
+function draw() {
+  background(220);
+  ambientLight(100);
+  directionalLight(255, 255, 255, 0, 0, 1);
+  rotateX(angle);
+  rotateY(angle * 1.3);
+  rotateZ(angle * 0.7);
+  normalMaterial();
+  
+  fill(100);
+  beginShape();
+  vertex(0,0);
+  vertex(100, 0);
+  vertex(100, 100);
+  vertex(0, 100);
+  endShape(CLOSE);
+  
+  angle += 0.03;
+}
+  </script>
 </body>
 </html>
